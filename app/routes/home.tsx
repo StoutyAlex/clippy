@@ -25,7 +25,7 @@ export default function Home(props: Route.ComponentProps) {
       </div>
       <div className="w-full flex justify-center">
         <video
-          src="/video/SampleVideo_1280x720_10mb.mp4" // will call the loader with params.key = "movie.mp4"
+          src="https://clippy-clip-storage.s3.eu-west-1.amazonaws.com/SampleVideo_1280x720_10mb.mp4" // will call the loader with params.key = "movie.mp4"
           controls
           width="640"
         />

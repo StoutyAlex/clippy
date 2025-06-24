@@ -1,3 +1,4 @@
+'use client';
 import { useFetcher } from 'react-router';
 
 import { getAll, listBucket } from '~/server/clip.database';

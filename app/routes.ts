@@ -5,6 +5,8 @@ export default [
 
   route('/video/:key', 'routes/video.id.ts'),
 
+  ...prefix('/api', [route('/presigned-url', 'routes/api/presigned-url.ts')]),
+
   // ...prefix('/auth', [route('/login', 'routes/auth/login.ts'), route('/signup', 'routes/auth/signup.ts')]),
 
   // route('/login', 'routes/login.tsx'),

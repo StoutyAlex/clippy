@@ -1,5 +1,4 @@
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
-import { FpjsProvider } from '@fingerprintjs/fingerprintjs-pro-react';
 
 import type { Route } from './+types/root';
 import './app.css';

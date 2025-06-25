@@ -1,13 +1,14 @@
 import { createCookieSessionStorage } from 'react-router';
 
-export const { getSession, commitSession, destroySession } = createCookieSessionStorage({
+export const sessionStorage = createCookieSessionStorage({
   cookie: {
-    name: 'bs:session',
-    httpOnly: true,
-    maxAge: 60 * 60 * 24 * 5,
-    path: '/',
+    name: '_session',
     sameSite: 'lax',
-    secrets: ['f3cr@z7'],
-    secure: true,
+    path: '/',
+    httpOnly: true,
+    secrets: ['s3cr3t'],
+    secure: process.env.NODE_ENV === 'production',
   },
 });
+
+export const { getSession, commitSession, destroySession } = sessionStorage;

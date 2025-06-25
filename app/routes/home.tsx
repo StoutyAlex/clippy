@@ -15,9 +15,6 @@ export const loader = async ({ request }: Route.LoaderArgs) => {
   const clips = await getAll();
   const clip = await listBucket();
 
-  console.log('Clips loaded:', clips.length);
-  console.log('Buckets loaded:', clip);
-
   return { clips, clip };
 };
 

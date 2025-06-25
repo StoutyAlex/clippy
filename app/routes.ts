@@ -7,7 +7,11 @@ export default [
 
   ...prefix('/api', [route('/presigned-url', 'routes/api/presigned-url.ts')]),
 
-  // ...prefix('/auth', [route('/login', 'routes/auth/login.ts'), route('/signup', 'routes/auth/signup.ts')]),
+  ...prefix('/auth', [
+    route('/discord/callback', 'routes/auth/discord/callback.ts'),
+    // route('/login', 'routes/auth/login.ts'),
+    // route('/signup', 'routes/auth/signup.ts'),
+  ]),
 
   // route('/login', 'routes/login.tsx'),
   // route('/signup', 'routes/signup.tsx'),

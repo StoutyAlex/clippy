@@ -59,6 +59,12 @@ export const loader: LoaderFunction = async ({ request }) => {
     body,
   });
 
+  if (!response.ok) {
+    const errorText = await response.text();
+    console.error('Error fetching token:', errorText);
+    return new Response('Failed to fetch token', { status: response.status });
+  }
+
   const tokenData = await response.json();
 
   console.log('Token Data:', tokenData);
